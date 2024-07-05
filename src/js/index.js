@@ -50,8 +50,8 @@ const getFullDate = () => {
   const hours = fixTime(date.getHours());
   const seconds = date.getSeconds();
   const secondsDegrees = seconds * 6;
-  const minutesDegrees = minutes * 6;
-  const hoursDegrees = hours * 30;
+  const minutesDegrees = minutes * 6 + seconds / 10;
+  const hoursDegrees = hours * 30 + minutes / 2;
 
   dateDayElement.textContent = day;
   dateNumberElement.textContent = dayNumber;
